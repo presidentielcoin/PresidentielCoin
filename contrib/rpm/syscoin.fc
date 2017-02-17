@@ -1,0 +1,8 @@
+/usr/bin/presidentielcoin-cli		--	gen_context(system_u:object_r:presidentielcoin_exec_t,s0)
+/usr/sbin/presidentielcoind		--	gen_context(system_u:object_r:presidentielcoin_exec_t,s0)
+/usr/lib(64)?/presidentielcoin/presidentielcoind		--	gen_context(system_u:object_r:presidentielcoin_exec_t,s0)
+
+/etc/presidentielcoin(/.*)?		gen_context(system_u:object_r:presidentielcoin_conf_t,s0)
+/var/lib/presidentielcoin(/.*)?		gen_context(system_u:object_r:presidentielcoin_var_lib_t,s0)
+
+(/var)?/run/presidentielcoind(/.*)?   gen_context(system_u:object_r:presidentielcoin_var_run_t,s0)

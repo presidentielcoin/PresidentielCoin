@@ -1,0 +1,33 @@
+# /etc/conf.d/presidentielcoind: config file for /etc/init.d/presidentielcoind
+
+# Config file location
+#PRESIDENTIELCOIND_CONFIGFILE="/etc/presidentielcoin/presidentielcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $PRESIDENTIELCOIND_USER)
+#PRESIDENTIELCOIND_PIDDIR="/var/run/presidentielcoind"
+
+# What filename to give the pidfile
+#PRESIDENTIELCOIND_PIDFILE="${PRESIDENTIELCOIND_PIDDIR}/presidentielcoind.pid"
+
+# Where to write presidentielcoind data (be mindful that the blockchain is large)
+#PRESIDENTIELCOIND_DATADIR="/var/lib/presidentielcoind"
+
+# User and group to own presidentielcoind process
+#PRESIDENTIELCOIND_USER="presidentielcoin"
+#PRESIDENTIELCOIND_GROUP="presidentielcoin"
+
+# Path to presidentielcoind executable
+#PRESIDENTIELCOIND_BIN="/usr/bin/presidentielcoind"
+
+# Nice value to run presidentielcoind under
+#PRESIDENTIELCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+PRESIDENTIELCOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for presidentielcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+PRESIDENTIELCOIND_SIGTERM_TIMEOUT=60

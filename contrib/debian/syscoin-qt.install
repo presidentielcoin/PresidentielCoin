@@ -1,0 +1,6 @@
+usr/local/bin/presidentielcoin-qt usr/bin
+share/pixmaps/presidentielcoin32.xpm usr/share/pixmaps
+share/pixmaps/presidentielcoin16.xpm usr/share/pixmaps
+share/pixmaps/presidentielcoin128.png usr/share/pixmaps
+debian/presidentielcoin-qt.desktop usr/share/applications
+debian/presidentielcoin-qt.protocol usr/share/kde4/services/

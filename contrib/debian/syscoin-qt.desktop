@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Presidentielcoin Core
+Comment=Connect to the Presidentielcoin P2P Network
+Comment[de]=Verbinde mit dem Presidentielcoin peer-to-peer Netzwerk
+Comment[fr]=Presidentielcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Presidentielcoin, eşten eşe kriptografik sanal para birimi
+Exec=presidentielcoin-qt %u
+Terminal=false
+Type=Application
+Icon=presidentielcoin128
+MimeType=x-scheme-handler/presidentielcoin;
+Categories=Office;Finance;

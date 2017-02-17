@@ -1,0 +1,11 @@
+[Protocol]
+exec=presidentielcoin-qt '%u'
+protocol=presidentielcoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
