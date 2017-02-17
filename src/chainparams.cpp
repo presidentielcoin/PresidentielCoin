@@ -1,5 +1,5 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Presidentielcoin Core developers
+// Copyright (c) 2009-2015 The Gtacoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +15,7 @@
 #include <boost/assign/list_of.hpp>
 
 #include "chainparamsseeds.h"
-// PRESIDENTIELCOIN includes for gen block
+// GTACOIN includes for gen block
 #include "uint256.h"
 #include "arith_uint256.h"
 #include "hash.h"
@@ -41,7 +41,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     genesis.hashMerkleRoot = BlockMerkleRoot(genesis);
     return genesis;
 }
-// PRESIDENTIELCOIN generate block
+// GTACOIN generate block
 	// This will figure out a valid hash and Nonce if you're
 	// creating a different genesis block:
 static void GenerateGenesisBlock(CBlockHeader &genesisBlock, uint256 *phash)
@@ -109,12 +109,12 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
  *    timestamp before)
  * + Contains no strange transactions
  */
-// PRESIDENTIELCOIN parameters
+// GTACOIN parameters
 class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 1050000;
+        consensus.nSubsidyHalvingInterval = 1;
         consensus.nMajorityEnforceBlockUpgrade = 750;
         consensus.nMajorityRejectBlockOutdated = 950;
         consensus.nMajorityWindow = 1000;
@@ -153,17 +153,17 @@ public:
         nDefaultPort = 62931;
         nPruneAfterHeight = 1000000;
 		uint256 hash;
-		genesis = CreateGenesisBlock(1487341761, 2085146912, 0x1f0ffff0, 1, 50 * COIN);
+		genesis = CreateGenesisBlock(1486997567, 2085146912, 0x1e0ffff0, 1, 100 * COIN);
 		/*CBlockHeader genesisHeader = genesis.GetBlockHeader();
 		GenerateGenesisBlock(genesisHeader, &hash);*/
        
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000027e833170e8127ed7f6096eacba6b166d309df3d40ded0594832658fddf9"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000090039ced462a6e2eb80fe9aa5c1a3233d364c8b1b0b6a1e54c3ad39e31c"));
+        assert(genesis.hashMerkleRoot == uint256S("0xbce15d4f0f9d2d7ba03064da56007ea0a437d7da74eaadc2260b0d435fcec312"));
 
-        vSeeds.push_back(CDNSSeedData("presidentielcoin.ddns.net", "presidentielcoin.ddns.net"));
+        vSeeds.push_back(CDNSSeedData("gtacoin.ddns.net", "gtacoin.ddns.net"));
 
-		// PRESIDENTIELCOIN/BITCOIN key prefixes
+		// GTACOIN/BITCOIN key prefixes
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(5,5);
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1,128);
@@ -244,16 +244,16 @@ public:
         pchMessageStart[1] = 0x11;
         pchMessageStart[2] = 0x09;
         pchMessageStart[3] = 0x07;
-        nDefaultPort = 16293;
+        nDefaultPort = 62931;
         nPruneAfterHeight = 1000;
 		uint256 hash;
 
-        genesis = CreateGenesisBlock(1487341761, 414180785, 0x1f0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1486997567, 418497676, 0x1e0ffff0, 1, 100 * COIN);
 		/*CBlockHeader genesisHeader = genesis.GetBlockHeader();
 		GenerateGenesisBlock(genesisHeader, &hash);*/
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00003e4770b66951246f06a0ec88e0224fc086fbb1f67271259a6714ce9a5ff0"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000003982d70f5f25cec45c7ecaecc05d87bfd6577db78258da399672061fc6c"));
+        assert(genesis.hashMerkleRoot == uint256S("0xbce15d4f0f9d2d7ba03064da56007ea0a437d7da74eaadc2260b0d435fcec312"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -317,16 +317,16 @@ public:
         pchMessageStart[1] = 0xbf;
         pchMessageStart[2] = 0xb5;
         pchMessageStart[3] = 0xda;
-        nDefaultPort = 16294;
+        nDefaultPort = 18444;
         nPruneAfterHeight = 1000;
 		uint256 hash;
 
-        genesis = CreateGenesisBlock(1487341761, 3, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1486997567, 2083236895, 0x207fffff, 1, 100 * COIN);
 		/*CBlockHeader genesisHeader = genesis.GetBlockHeader();
 			GenerateGenesisBlock(genesisHeader, &hash);*/
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x68b1645895611d9ffd021110f3820ca0df0a349cad3695ce8d7f953dfa66dbdb"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x50cf6512a2cc82fa7a5ac882efae7c588cf854753ab3317c07e6523cadcafbb3"));
+        assert(genesis.hashMerkleRoot == uint256S("0xbce15d4f0f9d2d7ba03064da56007ea0a437d7da74eaadc2260b0d435fcec312"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
@@ -388,4 +388,3 @@ void UpdateRegtestBIP9Parameters(Consensus::DeploymentPos d, int64_t nStartTime,
 {
     regTestParams.UpdateBIP9Parameters(d, nStartTime, nTimeout);
 }
- 

@@ -1843,20 +1843,20 @@ bool ReadBlockHeaderFromDisk(CBlockHeader& block, const CBlockIndex* pindex, con
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
 	if(nHeight == 0)
-		return 1000000*COIN;
+		return 50*COIN;
 	if(nHeight == 1)
 	{
 		std::string chain = ChainNameFromCommandLine();
 		if (chain == CBaseChainParams::MAIN || chain == CBaseChainParams::REGTEST)
 		{
 			// SYSCOIN 2.1 snapshot
-			return 50 * COIN;
+			return 1000000 * COIN;
 		}
 	}
 	CAmount nSubsidy;
  
-    if(nHeight <= 9999999999)
-		nSubsidy = 50*COIN;  
+else if(nHeight <= 999999999)
+		nSubsidy = 50*COIN;
    else
 		nSubsidy = 0;
 	return nSubsidy;
