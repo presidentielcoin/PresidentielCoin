@@ -114,16 +114,16 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 1;
+        consensus.nSubsidyHalvingInterval = 1050000;
         consensus.nMajorityEnforceBlockUpgrade = 750;
         consensus.nMajorityRejectBlockOutdated = 950;
         consensus.nMajorityWindow = 1000;
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8");
         consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
-        consensus.nPowTargetTimespan =  1 * 60 * 60; // 1h retarget
-        consensus.nPowTargetSpacing = 1 * 60; // 1 minute
-		consensus.nAuxpowChainId = 0x1000;
+        consensus.nPowTargetTimespan =  10 * 24 * 60 * 60; // 10 days // 1h retarget
+        consensus.nPowTargetSpacing = 2.5 * 60; // 2.5 minutes
+	consensus.nAuxpowChainId = 0x1000;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1916;
